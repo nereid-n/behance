@@ -1,0 +1,76 @@
+@import "vars"
+
+.btn
+  display: flex
+  align-items: center
+  padding: 19px 33px
+  color: #ffffff
+  text-transform: uppercase
+  text-decoration: none
+  font-size: 14px
+  font-family: $muller
+  letter-spacing: 0.7px
+  border: none
+  border-radius: 30px / 50%
+  box-shadow: -1px 5px 13px rgba(19, 19, 19, 0.34)
+  cursor: pointer
+  transition: $transition
+  &:hover
+    .btn-thumb
+      .fa-thumbs-up
+        animation: scale 2s ease-in infinite
+      &-circle
+        animation: scale 2s ease-out infinite
+  &-pink
+    background-color: $pink
+    &:hover
+      background-color: darken($pink, 8)
+  &-number
+    font-size: 1.2em
+  .btn-thumb
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 38px
+    height: 38px
+    margin: -8px 7px -8px -20px
+    .fa-thumbs-up
+      position: relative
+      z-index: 1
+      color: $pink
+      font-size: 20px
+      animation: scale 2s ease-in
+    &-circle
+      position: absolute
+      width: 100%
+      height: 100%
+      background-color: #fff
+      border-radius: 50%
+      animation: scale 2s ease-out
+
+@keyframes scale
+  0%
+    transform: scale(1)
+  1%
+    transform: scale(0)
+  20%
+    transform: scale(0)
+  35%
+    transform: scale(1.4)
+  40%
+    transform: scale(1)
+  50%
+    transform: scale(1.15)
+  65%
+    transform: scale(1)
+  90%
+    transform: scale(1)
+  100%
+    transform: scale(1)
+
+@keyframes none
+  0%
+    transform: scale(1)
+  100%
+    transform: scale(1)

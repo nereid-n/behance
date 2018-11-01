@@ -1,3 +1,40 @@
 mixin header()
-	+b.header
-		block
+  header.header-wrap
+    .container
+      +b.header
+        +e.menu
+          +e.left
+            +e('a').menu-btn(href="#")
+              +e('span').menu-btn-round @
+              +e('span').menu-btn-text
+                span.fz12.fw-extra-bold info@avtouzor.ru
+            +e('a').menu-btn(href="#")
+              +e('span').menu-btn-round
+                i.fa.fa-phone
+              +e('span').menu-btn-text
+                span.fz12.fw-extra-bold +8 812 319-36-02
+                span.fz8.fw-medium Заказать обратный звонок
+          +e.right
+            +e('nav').nav
+            -
+              var nav = [
+                'О сервисе',
+                'Тарифы',
+                'Отзывы',
+                'Блог'
+              ]
+            each item in nav
+              +e('a').nav-item(href="#")= item
+            +e('a').icon(href="#")
+              img(src='assets/images/icons/ico-enter.png')
+            +e('a').icon(href="#")
+              img(src='assets/images/icons/ico-user.png')
+        +e.phone
+          +e('img').phone-img(src='assets/images/phone.png')
+          +e.phone-text
+            a.btn.btn-pink(href='#')
+              span.btn-thumb
+                i.fa.fa-thumbs-up.wow
+                span.btn-thumb-circle.wow
+              span получить <span class="fw-extra-bold"><span class="btn-number">100</span> лайков</span>
+            +e('a').more(href='#') Узнать подробнее

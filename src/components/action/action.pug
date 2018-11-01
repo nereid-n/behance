@@ -1,3 +1,44 @@
 mixin action()
-	+b.action
-		block
+  section.action-wrap
+    .container
+      +b.action
+        +e.title-wrap.row
+          .no-gutters
+            .col-xl-8.offset-xl-2
+              +e('h2').title.title
+                span.title-light небывалые высоты
+                span.title-extra-bold твоего аккаунта
+              h1.title-big Behance
+              p.main-text Заказывая у нас услуги вы получаете беспрецедентную возможность подняться в поиске сайта, получить ряд преимуществ над другими пользователями, попасть в топ исполнителей и значительно поднять свой статус. Просмотры и лайки ваших работ растут, что повышает интерес к вам потенциальных заказчиков.
+        +e.main
+          +e.left
+            +e.item
+              +e.item-img
+                img(src="assets/images/icons/action1.png")
+              +e.item-main
+                +e('span').item-title быстрая регистрации
+                +e('span').item-text Вам понадобится всего пара минут и Вы сможете воспользоваться возможностями нашего сервиса
+            +e.item
+              +e.item-img
+                img(src="assets/images/icons/action2.png")
+              +e.item-main
+                +e('span').item-title Постоянные бонусы
+                +e('span').item-text Мы предлагаем широкий ассортимент готовых кейсов, но также и индивидуальный подход
+            +e.item
+              +e.item-img
+                img(src="assets/images/icons/action3.png")
+              +e.item-main
+                +e('span').item-title невыносимо низкие цены
+                +e('span').item-text Наши цены разумные и аргументированы. Вы получаете 100% отдачу затраченных средств и намного больше - <span class="fw-extra-bold">непрерывное движение вверх!</span>
+            +e.item
+              +e.item-img
+                img(src="assets/images/icons/action4.png")
+              +e.item-main
+                +e('span').item-title соблюдение сроков
+                +e('span').item-text Предварительно с вами утверждается план работ и продвижение выполняется в строгом соответствии, после чего составляется отчет.
+          +e.right
+            +e.img
+              +e.img-text
+                span.fw-extra-bold.js-number 11,470
+                span просмотров!
+              img(src='assets/images/girl.png')

@@ -1,6 +1,14 @@
 extends ../components/layout-default/layout-default
+include ../components/action/action
+include ../components/prices/prices
+include ../components/reviews/reviews
+include ../components/callback/callback
 
 block head
     - var pageTitle = 'Index Page';
 
 block content
+  +action()
+  +prices()
+  +reviews()
+  +callback()

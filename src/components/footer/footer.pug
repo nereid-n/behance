@@ -1,3 +1,25 @@
 mixin footer()
-	+b.footer
-		block
+  footer.footer-wrap
+    .container
+      +b.footer.offset-xl-1
+        +e.nav
+          -
+            var nav = [
+              'Кейсы',
+              'Контакты',
+              'Акции',
+              'Отзывы'
+            ]
+          each item in nav
+            +e('a').nav-item(href='#')= item
+        .d-flex.flex-wrap.align-items-center
+          +e('a').btn(href='#')
+            +e('span').btn-round
+              i.fa.fa-phone
+            +e('span').btn-text
+              span.fz15.fw-extra-bold +8 812 319-36-02
+              span.fz10.fw-medium Заказать обратный звонок
+          +e('a').btn(href='#')
+            +e('span').btn-round @
+            +e('span').btn-text
+              span.fz15.fw-extra-bold info@avtouzor.ru

@@ -1,3 +1,1 @@
-class Shared {
-    constructor() {}
-}
+new WOW().init();
