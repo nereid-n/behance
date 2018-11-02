@@ -1,2 +1,59 @@
+@import "../../shared/sass/vars"
+
 .prices
-	display: block
+  padding: 0 35px 0 55px
+  &-wrap
+    padding: 50px 0
+    background-image: url('../images/bg1.png')
+    background-repeat: no-repeat
+    background-position: 12% 0
+  &__items
+    position: relative
+    display: flex
+    flex-wrap: wrap
+    margin-top: 70px
+    margin-left: 50px
+  &__img-drop
+    position: absolute
+    left: 215px
+    top: -45px
+  &__item
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding: 30px 15px
+    box-shadow: -1px 5px 35px rgba(19, 19, 19, 0.17)
+    background-color: #fff
+    &-pink
+      color: #ffffff
+      background-color: $pink
+    &-wrap
+      display: flex
+      flex-direction: column
+      width: 226px
+      margin: 3px
+      &:first-of-type
+        margin-right: 30px
+    &-img
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 55px
+      height: 55px
+      margin-bottom: 25px
+    &-title
+      font-size: 18px
+      font-weight: 800
+      text-transform: uppercase
+    &-price
+      font-size: 21px
+      font-weight: 800
+      text-transform: uppercase
+    &-ruble
+      font-family: $qanelas
+    &-after
+      margin-top: 10px
+      text-align: center
+      color: $pink
+      letter-spacing: 0.54px
+      font-size: 12px

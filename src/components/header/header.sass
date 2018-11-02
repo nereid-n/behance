@@ -1,13 +1,23 @@
 @import "../../shared/sass/vars"
 
 .header
-  padding: 20px 0 40px
+  position: relative
+  padding: 10px 0 50px
   color: #ffffff
   &-wrap
+    margin-top: 40px
+    position: relative
     background-image: url('../images/header-bg.png')
     background-size: cover
     background-repeat: no-repeat
     background-position: center 0
+    &:before
+      position: absolute
+      content: ''
+      top: -40px
+      width: 100%
+      height: 40px
+      background-color: #53b3fa
   &__menu
     display: flex
     flex-wrap: wrap
@@ -88,3 +98,101 @@
     text-decoration: underline
     &:hover
       text-decoration: none
+  &__starts
+    position: absolute
+    top: -40px
+    overflow: hidden
+  &__starts1
+    left: 50%
+    width: 580px
+    height: 540px
+    transform: translateX(-50%)
+    border-radius: 0 0 50% 50% / 0 0 60% 60%
+  &__starts2,
+  &__starts3
+    width: 410px
+    height: 320px
+  &__starts2
+    right: calc(50% + 290px)
+    border-radius: 0 0 0 50% / 0 0 0 80%
+  &__starts3
+    left: calc(50% + 290px)
+    border-radius: 0 0 50% 0 / 0 0 80% 0
+  &__starts4,
+  &__starts5
+    width: calc((100% - 1400px) / 2)
+    height: 115px
+  &__starts4
+    left: 0
+  &__starts5
+    right: 0
+
+@function multiple-box-shadow ($n)
+  $value: '#{random(2000)}px #{random(2000)}px #FFF'
+  @for $i from 2 through $n
+    $value: '#{$value} , #{random(2000)}px #{random(2000)}px #FFF'
+
+  @return unquote($value)
+
+$shadows-small:  multiple-box-shadow(700)
+$shadows-medium: multiple-box-shadow(200)
+$shadows-big:    multiple-box-shadow(100)
+
+
+#stars
+  width: 2px
+  height: 2px
+  background: transparent
+  box-shadow: $shadows-small
+  border-radius: 50%
+  animation			: animStar 50s linear infinite
+
+  &:after
+    content: " "
+    position: absolute
+    top: 2000px
+    width: 1px
+    height: 1px
+    background: transparent
+    box-shadow: $shadows-small
+
+#stars2
+  width: 3px
+  height: 3px
+  background: transparent
+  box-shadow: $shadows-medium
+  border-radius: 50%
+  animation			: animStar 100s linear infinite
+
+  &:after
+    content: " "
+    position: absolute
+    top: 2000px
+    width: 2px
+    height: 2px
+    background: transparent
+    box-shadow: $shadows-medium
+
+#stars3
+  width: 5px
+  height: 5px
+  background: transparent
+  box-shadow: $shadows-big
+  border-radius: 50%
+  animation			: animStar 150s linear infinite
+
+  &:after
+    content: " "
+    position: absolute
+    top: 2000px
+    width: 3px
+    height: 3px
+    background: transparent
+    box-shadow: $shadows-big
+
+@keyframes animStar
+  from
+    transform: translateY(0px)
+  to
+    transform: translateY(-2000px)
+

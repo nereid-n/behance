@@ -1,3 +1,20 @@
 mixin reviews()
-	+b.reviews
-		block
+  section.reviews-wrap
+    .container
+      +b.reviews
+        .d-flex.justify-content-center
+          h2.title
+            span.title-light Что говорят наши
+            span.title-extra-bold Довольные клиенты
+        +e.slider
+          - for (var i = 0; i < 5; i++)
+            +e.slider-item
+              +e.slider-top
+                +e.slider-photo
+                  img(src='assets/images/photo.png')
+                +e.slider-info
+                  span Елена Дмитренко
+                  span.fw-extra-bold @elena
+              +e('p').slider-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+

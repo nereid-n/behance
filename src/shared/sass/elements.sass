@@ -23,3 +23,30 @@
 .main-text
   margin-top: 0
   font-size: 15px
+
+.btn-arrow
+  position: relative
+
+.arrow-svg
+  position: absolute
+  top: -15px
+  right: calc(100% + 15px)
+  width: 45px
+  height: 45px
+  .draw-arrow
+    stroke-width: 5
+    stroke: $pink
+    fill: none
+    stroke-dasharray: 400
+    stroke-dashoffset: 400
+    animation-duration: 2.0s
+    animation-fill-mode: forwards
+    animation-name: draw
+    &.tail-1
+      animation-delay: .5s
+    &.tail-2
+      animation-delay: .7s
+
+@keyframes draw
+  to
+    stroke-dashoffset: 0
