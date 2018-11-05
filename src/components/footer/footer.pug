@@ -12,7 +12,7 @@ mixin footer()
             ]
           each item in nav
             +e('a').nav-item(href='#')= item
-        .d-flex.flex-wrap.align-items-center
+        .d-flex.flex-wrap.align-items-center.justify-content-center
           +e('a').btn(href='#')
             +e('span').btn-round
               i.fa.fa-phone

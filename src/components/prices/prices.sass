@@ -2,8 +2,10 @@
 
 .prices
   padding: 0 35px 0 55px
+  @media (max-width: 1199px)
+    padding: 0
   &-wrap
-    padding: 50px 0
+    padding: 50px 0 40px
     background-image: url('../images/bg1.png')
     background-repeat: no-repeat
     background-position: 12% 0
@@ -13,6 +15,10 @@
     flex-wrap: wrap
     margin-top: 70px
     margin-left: 50px
+    @media (max-width: 1199px)
+      margin-left: 0
+    @media (max-width: 991px)
+      justify-content: center
   &__img-drop
     position: absolute
     left: 215px
@@ -31,9 +37,11 @@
       display: flex
       flex-direction: column
       width: 226px
-      margin: 3px
+      margin: 3px 3px 10px
       &:first-of-type
         margin-right: 30px
+        @media (max-width: 1199px)
+          margin-right: 3px
     &-img
       display: flex
       align-items: center

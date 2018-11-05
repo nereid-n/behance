@@ -56,6 +56,10 @@
     align-items: center
     justify-content: center
     width: calc((100% - 230px) / 2)
+    @media (max-width: 991px)
+      width: 50%
+    @media (max-width: 575px)
+      width: 100%
   &__icon
     padding: 5px
     margin: 0 -5px 0 20px
@@ -81,12 +85,90 @@
     justify-content: center
     align-items: center
     &-img
+      position: relative
+      z-index: 1
       margin-top: -40px
       margin-left: 5px
+      @media (max-width: 991px)
+        margin-top: 10px
     &-text
       position: absolute
+      z-index: 2
       top: 102px
       left: calc(50% + 8px)
+      @media (max-width: 768px)
+        top: 470px
+        left: 50%
+        transform: translateX(-50%)
+    &-wrap
+      position: relative
+    &-info
+      position: absolute
+      top: 13px
+      left: 26px
+      width: 192px
+      height: 368px
+      padding: 8px
+      color: $dark
+      font-size: 7px
+      border-bottom-left-radius: 7px
+      border-bottom-right-radius: 7px
+      background-color: #fff
+      overflow: hidden
+      pointer-events: none
+      @media (max-width: 991px)
+        top: 63px
+      .fa
+        margin-right: 2px
+    &-avatar
+      min-width: 51px
+      max-width: 51px
+      height: 51px
+      margin-right: 10px
+      border-radius: 50%
+      overflow: hidden
+      img
+        width: 100%
+        height: 100%
+        object-fit: cover
+    &-top
+      padding: 7px 8px
+    &-name
+      display: inline-block
+      font-size: 11px
+      margin-bottom: 5px
+    &-main
+      display: flex
+      font-size: 7px
+    &-btn
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 80px
+      height: 17px
+      margin-top: 12px
+      margin-bottom: 30px
+      font-size: 7px
+      font-weight: 700
+      border-radius: 10px
+      &-blue
+        color: #ffffff
+        background-color: #0258ff
+    &-item
+      display: flex
+      flex-direction: column
+      width: 85px
+      margin-bottom: 10px
+      &:nth-child(odd)
+        margin-right: 5px
+      &-img
+        width: 100%
+        height: 75px
+        margin-bottom: 10px
+        img
+          width: 100%
+          height: 100%
+          object-fit: cover
   &__more
     display: inline-block
     margin: 10px 0 0 105px
@@ -96,6 +178,8 @@
     font-weight: 700
     text-transform: uppercase
     text-decoration: underline
+    @media (max-width: 768px)
+      color: $dark
     &:hover
       text-decoration: none
   &__starts
@@ -108,10 +192,14 @@
     height: 540px
     transform: translateX(-50%)
     border-radius: 0 0 50% 50% / 0 0 60% 60%
+    @media (max-width: 580px)
+      width: 100%
   &__starts2,
   &__starts3
     width: 410px
     height: 320px
+    @media (max-width: 1400px)
+      width: calc((100% - 580px) / 2)
   &__starts2
     right: calc(50% + 290px)
     border-radius: 0 0 0 50% / 0 0 0 80%

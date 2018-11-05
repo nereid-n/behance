@@ -4,6 +4,8 @@
   &__slider
     margin-top: 40px
     padding-left: 100px
+    @media (max-width: 575px)
+      padding-left: 0
     &:after
       position: absolute
       content: ''
@@ -12,11 +14,19 @@
       height: 100%
       width: 150px
       background-image: linear-gradient(to right, transparent, #fff)
+      @media (max-width: 1230px)
+        right: -15px
+      @media (max-width: 767px)
+        display: none
     .slick-list
       margin: 0 -20px
+      @media (max-width: 1230px)
+        margin: 0 -15px
     &-item
       margin: 0 20px
       letter-spacing: 0.7px
+      @media (max-width: 1230px)
+        margin: 0 15px
     &-top
       display: flex
       align-items: center
@@ -43,6 +53,13 @@
   &__prev
     left: 0
     top: calc(50% - 35px)
+    @media (max-width: 575px)
+      bottom: -30px
+      top: unset
+      left: 30px
   &__next
     bottom: calc(50% - 35px)
     left: 40px
+    @media (max-width: 575px)
+      bottom: -60px
+      left: 70px

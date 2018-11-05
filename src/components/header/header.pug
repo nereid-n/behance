@@ -50,7 +50,37 @@ mixin header()
             +e('a').icon(href="#")
               img(src='assets/images/icons/ico-user.png')
         +e.phone
-          +e('img').phone-img(src='assets/images/phone.png')
+          +e.phone-wrap
+            +e('img').phone-img(src='assets/images/phone.png')
+            +e.phone-info
+              +e('span').phone-name Ekaterina Boyko
+              +e.phone-main
+                +e.phone-avatar
+                  img(src='assets/images/girl.png')
+                .d-flex.flex-column
+                  span Graphic designer
+                  span Craft Group
+                  span.c-gray.mt-1
+                    i.fa.fa-map-marker
+                    | Moscow, Russian Federation
+                  span.c-gray.mt-1.text-underline https://vk.com/kotya_ka
+              .d-flex.justify-content-between.pr-2
+                +e.phone-btn.__phone-btn-blue Следить
+                +e.phone-btn
+                  i.fa.fa-envelope
+                  |  Сообщение
+              .d-flex.mb-4
+                span.pr-4 Инф
+                span.pr-4 Проекты
+                span.pr-4 Коллекции
+                span Стена
+              .d-flex.flex-wrap
+                - for (var i = 0; i < 4; i++)
+                  +e.phone-item
+                    +e.phone-item-img
+                      img(src='assets/images/girl.png')
+                    span.font-weight-bold.mb-2 Креативый дизайн буклета детского клуба
+                    span Ekaterina Boyko
           +e.phone-text
             a.btn.btn-pink(href='#')
               span.btn-thumb

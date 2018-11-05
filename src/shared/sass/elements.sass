@@ -7,9 +7,15 @@
     display: block
     font-size: 36px
     text-transform: uppercase
+    @media (max-width: 767px)
+      font-size: 28px
+    @media (max-width: 565px)
+      font-size: 24px
   &-extra-bold
     padding-left: 50px
     font-weight: 800
+    @media (max-width: 767px)
+      padding-left: 0
   &-light
     margin-bottom: 5px
     font-weight: 400
@@ -19,6 +25,18 @@
     font-size: 173px
     letter-spacing: -0.54px
     line-height: 0.9em
+    @media (max-width: 992px)
+      margin-left: -6px
+      font-size: 130px
+    @media (max-width: 767px)
+      margin-left: -5px
+      font-size: 100px
+    @media (max-width: 575px)
+      font-size: 80px
+    @media (max-width: 500px)
+      font-size: 70px
+    @media (max-width: 500px)
+      font-size: 60px
 
 .main-text
   margin-top: 0
@@ -33,6 +51,10 @@
   right: calc(100% + 15px)
   width: 45px
   height: 45px
+  @media (max-width: 400px)
+    height: 40px
+    width: 40px
+    right: 100%
   .draw-arrow
     stroke-width: 5
     stroke: $pink
