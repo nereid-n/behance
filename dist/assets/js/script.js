@@ -23,29 +23,44 @@ function countNumber(item) {
     k++;
     if (k === max) {
       item.innerHTML = text;
-      item.classList.add('js-done');
       clearInterval(intervalNumber);
     }
   }, 50);
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  var lazyImages = [].slice.call(document.querySelectorAll('.js-number'));
+  var numbers = [].slice.call(document.querySelectorAll('.js-number'));
 
   if ("IntersectionObserver" in window) {
-    var lazyImageObserver = new IntersectionObserver(function (entries, observer) {
+    var numberObserver = new IntersectionObserver(function (entries, observer) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
           var item = entry.target;
-          if (!item.classList.contains('js-done')) {
-            countNumber(item);
-          }
+          countNumber(item);
         }
       });
     });
 
-    lazyImages.forEach(function (lazyImage) {
-      lazyImageObserver.observe(lazyImage);
+    numbers.forEach(function (number) {
+      numberObserver.observe(number);
+    });
+  }
+
+  var wows = [].slice.call(document.querySelectorAll('.wow'));
+
+  if ("IntersectionObserver" in window) {
+    var wowObserver = new IntersectionObserver(function (entries, observer) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          var item = entry.target;
+          new WOW().init();
+          item.classList.remove('undefined');
+        }
+      });
+    });
+
+    wows.forEach(function (wow) {
+      wowObserver.observe(wow);
     });
   }
 });

@@ -4,11 +4,19 @@
   padding: 0 35px 0 55px
   @media (max-width: 1199px)
     padding: 0
+  &-stars
+    width: 320px
+    height: 320px
+    border-radius: 50%
+    top: 70px
+    left: calc(12% + 50px)
   &-wrap
+    position: relative
     padding: 50px 0 40px
     background-image: url('../images/bg1.png')
     background-repeat: no-repeat
     background-position: 12% 0
+    overflow: hidden
   &__items
     position: relative
     display: flex
@@ -65,3 +73,18 @@
       color: $pink
       letter-spacing: 0.54px
       font-size: 12px
+  &-comet1
+    position: absolute
+    width: 20%
+    animation: comet1 3s linear infinite
+
+@keyframes comet1
+  0%
+    top: 10%
+    right: -20%
+  70%
+    top: 10%
+    right: -20%
+  100%
+    top: 60%
+    right: 100%
