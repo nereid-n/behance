@@ -1,0 +1,19 @@
+mixin enter()
+  +b.enter
+    .container
+      +e('form').form
+        -
+          var inputs = [
+            {
+              name: 'Email',
+              type: 'email'
+            },
+            {
+              name: 'Пароль',
+              type: 'password'
+            }
+          ]
+        each item in inputs
+          input(placeholder= item.name type= item.type || 'text')
+        button.btn.btn-pink.my-3 Войти
+        a(href='#') Регистрация

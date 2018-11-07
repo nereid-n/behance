@@ -1,0 +1,29 @@
+mixin registration()
+  +b.enter
+    .container
+      +e('form').form
+        -
+          var inputs = [
+            {
+              name: 'Имя пользователя'
+            },
+            {
+              name: 'Логин'
+            },
+            {
+              name: 'Email',
+              type: 'email'
+            },
+            {
+              name: 'Пароль',
+              type: 'password'
+            },
+            {
+              name: 'Повторите пароль',
+              type: 'password'
+            }
+          ]
+        each item in inputs
+          input(placeholder= item.name type= item.type || 'text')
+        button.btn.btn-pink.my-3 Зарегистрироваться
+        a(href='#') Вход
