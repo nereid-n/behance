@@ -1,6 +1,21 @@
+@import "../../shared/sass/vars"
+
 .enter
-  padding: 100px 0
+  position: absolute
+  top: 100px
+  left: 50%
+  display: flex
+  flex-direction: column
+  justify-content: center
+  min-height: 350px
+  transform: translateX(-50%)
+  @media (max-width: 767px)
+    top: 180px
   &__form
     display: flex
     flex-direction: column
     align-items: center
+  &__link
+    color: #ffffff
+    &:hover
+      color: $pink

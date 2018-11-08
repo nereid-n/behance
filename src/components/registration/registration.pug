@@ -26,4 +26,4 @@ mixin registration()
         each item in inputs
           input(placeholder= item.name type= item.type || 'text')
         button.btn.btn-pink.my-3 Зарегистрироваться
-        a(href='#') Вход
+        +e('a').link(href='#') Вход

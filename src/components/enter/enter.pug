@@ -16,4 +16,4 @@ mixin enter()
         each item in inputs
           input(placeholder= item.name type= item.type || 'text')
         button.btn.btn-pink.my-3 Войти
-        a(href='#') Регистрация
+        +e('a').link(href='#') Регистрация

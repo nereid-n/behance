@@ -1,0 +1,37 @@
+mixin header-enter()
+  header.header-wrap.header-enter
+    .header__stars1.header__stars
+      #stars
+      #stars2
+      #stars3
+    .header__cloud
+      img(src='assets/images/header-bg2.png')
+    .container
+      +b.header
+        +e.menu
+          +e.left
+            +e('a').menu-btn(href="#")
+              +e('span').menu-btn-round @
+              +e('span').menu-btn-text
+                span.fz12.fw-extra-bold info@avtouzor.ru
+            +e('a').menu-btn(href="#")
+              +e('span').menu-btn-round
+                i.fa.fa-phone
+              +e('span').menu-btn-text
+                span.fz12.fw-extra-bold +8 812 319-36-02
+                span.fz8.fw-medium Заказать обратный звонок
+          +e.right
+            +e('nav').nav
+            -
+              var nav = [
+              'О сервисе',
+              'Тарифы',
+              'Отзывы',
+              'Блог'
+              ]
+            each item in nav
+              +e('a').nav-item(href="#")= item
+            +e('a').icon(href="#")
+              img(src='assets/images/icons/ico-enter.png')
+            +e('a').icon(href="#")
+              img(src='assets/images/icons/ico-user.png')
