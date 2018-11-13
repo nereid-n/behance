@@ -1,11 +1,11 @@
 mixin header-enter()
   header.header-wrap.header-enter
     .header__stars1.header__stars
-      #stars
-      #stars2
-      #stars3
+      .stars
+      .stars2
+      .stars3
     .header__cloud
-      img(src='assets/images/header-bg2.png')
+      img(src='assets/images/header-bg2.png' alt='')
     .container
       +b.header
         +e.menu
@@ -32,6 +32,6 @@ mixin header-enter()
             each item in nav
               +e('a').nav-item(href="#")= item
             +e('a').icon(href="#")
-              img(src='assets/images/icons/ico-enter.png')
+              img(src='assets/images/icons/ico-enter.png' alt='')
             +e('a').icon(href="#")
-              img(src='assets/images/icons/ico-user.png')
+              img(src='assets/images/icons/ico-user.png' alt='')

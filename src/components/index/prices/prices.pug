@@ -1,10 +1,10 @@
 mixin prices()
   section.prices-wrap
     .stars-wrap.prices-stars
-      #stars
-      #stars2
-      #stars3
-      img.prices-comet1(src="assets/images/comet1.png")
+      .stars
+      .stars2
+      .stars3
+      img.prices-comet1(src="assets/images/comet1.png" alt='')
     .container
       +b.prices
         .col-xl-9.offset-xl-2
@@ -64,7 +64,7 @@ mixin prices()
             +e.item-wrap
               +e.item(class= item.className || '')
                 +e.item-img
-                  img(src= item.img)
+                  img(src= item.img alt='')
                 +e('span').item-title.mb20= item.title
                 span= item.text[0]
                 span.mb20= item.text[1]

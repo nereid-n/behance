@@ -1,11 +1,11 @@
 mixin header()
   header.header-wrap
     .header__stars1.header__stars
-      #stars
-      #stars2
-      #stars3
+      .stars
+      .stars2
+      .stars3
     .header__cloud
-      img(src='assets/images/header-bg.png')
+      img(src='assets/images/header-bg.png' alt='')
     .container
       +b.header
         +e.menu
@@ -32,9 +32,9 @@ mixin header()
             each item in nav
               +e('a').nav-item(href="#")= item
             +e('a').icon(href="#")
-              img(src='assets/images/icons/ico-enter.png')
+              img(src='assets/images/icons/ico-enter.png' alt='')
             +e('a').icon(href="#")
-              img(src='assets/images/icons/ico-user.png')
+              img(src='assets/images/icons/ico-user.png' alt='')
         +e.phone
           +e.phone-wrap
             +e('img').phone-img(src='assets/images/phone.png')
@@ -42,7 +42,7 @@ mixin header()
               +e('span').phone-name Ekaterina Boyko
               +e.phone-main
                 +e.phone-avatar
-                  img(src='assets/images/girl.png')
+                  img(src='assets/images/girl.png' alt='')
                 .d-flex.flex-column
                   span Graphic designer
                   span Craft Group
@@ -64,7 +64,7 @@ mixin header()
                 - for (var i = 0; i < 4; i++)
                   +e.phone-item
                     +e.phone-item-img
-                      img(src='assets/images/girl.png')
+                      img(src='assets/images/girl.png' alt='')
                     span.font-weight-bold.mb-2 Креативый дизайн буклета детского клуба
                     span Ekaterina Boyko
           +e.phone-text
