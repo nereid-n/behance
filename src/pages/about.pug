@@ -1,0 +1,10 @@
+extends ../components/layout-default/layout-main
+include ../components/about/about
+include ../components/index/callback/callback
+
+block head
+  - var pageTitle = 'About';
+
+block content
+  +about()
+  +callback()
