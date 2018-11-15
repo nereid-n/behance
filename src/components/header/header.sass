@@ -6,7 +6,7 @@
   color: #ffffff
   &-wrap
     position: relative
-    background-image: linear-gradient(-177deg, #62bafb 0%, #008df5 100%)
+    background-image: $gradient
   &-enter
     min-height: 530px
     margin-bottom: 50px
@@ -52,8 +52,9 @@
     align-items: center
     justify-content: center
     width: calc((100% - 230px) / 2)
-    @media (max-width: 991px)
+    @media (max-width: 1199px)
       width: 50%
+      margin-bottom: 10px
     @media (max-width: 575px)
       width: 100%
   &__icon
@@ -194,12 +195,69 @@
       width: 1920px
       margin-left: calc((1920px - 100%) / -2)
   &-small
-    &-bg
-      width: 1070px
-      height: 493px
-      background-image: linear-gradient(-177deg, #62bafb 0%, #008df5 100%)
-      img
-        position: relative
+    &-wrap
+      position: relative
+      overflow: hidden
+      @media (max-width: 575px)
+        padding-bottom: 100px
+      .header__stars1
+        width: 1070px
+        height: 493px
+        background-image: $gradient
+        @media (max-width: 1400px)
+          height: 400px
+          width: 760px
+        @media (max-width: 1100px)
+          width: 680px
+        @media (max-width: 991px)
+          width: 600px
+          height: 350px
+        @media (max-width: 767px)
+          width: 1000px
+          height: 500px
+        img
+          position: absolute
+          top: 0
+          height: calc(100% + 1px)
+          max-height: calc(100% + 1px)
+          width: 100%
+      .header__icon
+        .icon-white
+          display: none
+          @media (max-width: 767px)
+            display: block
+        .icon-blue
+          @media (max-width: 767px)
+            display: none
+      .header__phone
+        justify-content: flex-start
+        margin-left: -70px
+        margin-top: 50px
+        color: $blue
+        @media (max-width: 1199px)
+          margin-top: 10px
+        @media (max-width: 767px)
+          margin-left: auto
+          justify-content: center
+        .header__phone-text
+          left: 12%
+          top: 80px
+          @media (max-width: 1199px)
+            left: 14%
+            top: 40px
+          @media (max-width: 991px)
+            left: 20%
+          @media (max-width: 767px)
+            left: 80%
+            top: 90px
+          @media (max-width: 575px)
+            top: 100%
+            left: 50%
+            transform: translateX(-50%)
+      .header__right
+        color: $blue
+        @media (max-width: 767px)
+          color: #ffffff
 
 @function multiple-box-shadow ($n)
   $value: '#{random(2000)}px #{random(2000)}px #FFF'

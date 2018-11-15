@@ -7,6 +7,8 @@
     display: block
     font-size: 36px
     text-transform: uppercase
+    @media (max-width: 991px)
+      font-size: 32px
     @media (max-width: 767px)
       font-size: 28px
     @media (max-width: 565px)
@@ -25,7 +27,7 @@
     font-size: 173px
     letter-spacing: -0.54px
     line-height: 0.9em
-    @media (max-width: 992px)
+    @media (max-width: 991px)
       margin-left: -6px
       font-size: 130px
     @media (max-width: 767px)
@@ -35,9 +37,25 @@
       font-size: 80px
     @media (max-width: 500px)
       font-size: 70px
-    @media (max-width: 500px)
+    @media (max-width: 400px)
       font-size: 60px
-      
+    &-second
+      margin-top: -25px
+      font-size: 127px
+      @media (max-width: 991px)
+        margin-top: -15px
+        font-size: 94px
+      @media (max-width: 767px)
+        font-size: 84px
+      @media (max-width: 575px)
+        margin-top: -10px
+        font-size: 72px
+      @media (max-width: 500px)
+        margin-top: -5px
+        font-size: 64px
+      @media (max-width: 400px)
+        font-size: 58px
+
 .stars-wrap
   position: absolute
   overflow: hidden
@@ -45,6 +63,8 @@
 .main-text
   margin-top: 0
   font-size: 15px
+  p
+    margin-top: 0
 
 .btn-arrow
   position: relative
