@@ -4,6 +4,19 @@
   position: relative
   padding: 20px 0 50px
   color: #ffffff
+
+  &__btn
+    padding: 0
+
+    color: #ffffff
+    background-color: transparent
+    border: none
+    cursor: pointer
+    transition: color 0.2s
+
+    &:hover, &:active, &:focus
+      color: #e32c74
+      transition: color 0.2s
   &-wrap
     position: relative
     background-image: $gradient
@@ -45,6 +58,7 @@
         display: flex
         flex-direction: column
         margin-left: 7px
+
   &__right,
   &__left
     display: flex

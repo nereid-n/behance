@@ -16,12 +16,12 @@ mixin header()
               +e('span').menu-btn-round @
               +e('span').menu-btn-text
                 span.fz12.fw-extra-bold info@avtouzor.ru
-            +e('a').menu-btn(href="#")
-              +e('span').menu-btn-round
+            +e.menu-btn
+              +e('a')(href="tel:+8 812 319-36-02").menu-btn-round
                 i.fa.fa-phone
-              +e('span').menu-btn-text
-                span.fz12.fw-extra-bold +8 812 319-36-02
-                span.fz8.fw-medium Заказать обратный звонок
+              +e.menu-btn-text
+                a(href="tel:+8 812 319-36-02").header__btn.fz12.fw-extra-bold +8 812 319-36-02
+                button(type="button").header__btn.fz10.fw-medium Заказать обратный звонок
           +e.right
             +e('nav').nav
             -
